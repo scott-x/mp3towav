@@ -2,21 +2,20 @@
 # @Author: scottxiong
 # @Date:   2021-01-09 05:32:58
 # @Last Modified by:   scottxiong
-# @Last Modified time: 2021-01-09 07:01:38
+# @Last Modified time: 2021-01-11 15:55:17
 import os
 
-
-# paly
+# play
 def play(wav):
 	os.system("aplay "+wav)
 
-# 遍历指定目录，显示目录下的所有文件名
 def run(filepath):
-    pathDir =  os.listdir(filepath)
-    for allDir in pathDir:
-        child = os.path.join('%s%s' % (filepath, allDir))
-        # print(child)
-        play(child)
+    wavs =  os.listdir(filepath)
+    for wav in wavs:
+        fullpath = os.path.join('%s%s' % (filepath, wav))
+        # print(fullpath)
+        play(fullpath)
 
-
-run("wav/")
+# play wav with a loop model
+if __name__ == '__main__':
+	run("wav/")
