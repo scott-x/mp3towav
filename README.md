@@ -10,9 +10,11 @@ Convert mp3s to wavs, note it depends on `ffmpeg`
 ├── mp3
 ├── mp3_to_wav.py
 ├── play_wav.py
+├── random_play_wav.py
+├── single_random_play.py
 └── wav
 
-2 directories, 3 files
+2 directories, 5 files
 ```
 
 ### useage 
